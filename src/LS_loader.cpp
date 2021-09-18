@@ -3,16 +3,8 @@
  * Copyright (C) 2021+ WarheadCore <https://github.com/WarheadCore>
  */
 
-#ifndef _LEARN_ALL_SPELLS_LOADER_H_
-#define _LEARN_ALL_SPELLS_LOADER_H_
-
-// From SC
 void AddSC_LearnAllSpells();
 
-// Add all
-void AddLearnAllSpellsScripts()
-{
+void Addmod_learn_spellsScripts() {
     AddSC_LearnAllSpells();
 }
-
-#endif /* _LEARN_ALL_SPELLS_LOADER_H_ */
