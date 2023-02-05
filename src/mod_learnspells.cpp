@@ -81,6 +81,8 @@ private:
             {SPELLFAMILY_HUNTER,
             {
                 AddSpell{1515}, // tame beast
+                AddSpell{2641}, // Dismiss Pet
+                AddSpell{883},  // Call Pet
             }},
         }},
         {12,
