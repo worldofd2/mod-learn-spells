@@ -10,9 +10,9 @@ class LearnSpellsOnLevelUp : public PlayerScript
 public:
     LearnSpellsOnLevelUp() : PlayerScript("LearnSpellsOnLevelUp") { }
 
-    void OnFirstLogin(Player* player) override
+    void OnLogin(Player* player) override
     {
-        if (sConfigMgr->GetOption<bool>("LearnSpells.OnFirstLogin", 0))
+        if (sConfigMgr->GetOption<bool>("LearnSpells.OnLogin", 1))
         {
             LearnSpellsForNewLevel(player, 1);
         }
@@ -42,6 +42,8 @@ private:
         28271, 28272, 61025, 61305, 61721, 61780,
         // OPTIONAL QUEST SPELLS
         18540,
+        // DK SPELLS
+        45470,
     };
 
     struct AddSpell // Additional Spell Entry
@@ -106,6 +108,10 @@ private:
             {
                 AddSpell{674}, // dual wield
             }},
+            {SPELLFAMILY_WARLOCK,
+            {
+                AddSpell{712}, // Succubus
+            }},
         }},
         {24,
         {
@@ -134,6 +140,10 @@ private:
             {SPELLFAMILY_SHAMAN,
             {
                 AddSpell{66842}, // Call of the Elements
+            }},
+            {SPELLFAMILY_WARLOCK,
+            {
+                AddSpell{691}, // Felhunter
             }},
         }},
         {32,
